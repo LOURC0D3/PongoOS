@@ -516,6 +516,7 @@ static void aes_cbc(void *key, void *iv, void *data, size_t size)
 void copy_block(void* to, void* from);
 void sep_aes_kbag(uint32_t* kbag_bytes_32, uint32_t * kbag_out, char mode);
 void reload_sepi(Img4 *img4) {
+    fiprintf(stderr, "Reloading SEPI");
     DERItem key;
 
     uint8_t kbag[0x30];
